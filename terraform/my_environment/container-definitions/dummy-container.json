@@ -1,0 +1,23 @@
+[
+    {
+        "essential": true,
+        "name": "${name}",
+        "image": "jbritos/hello-world",
+        "portMappings": [
+            {
+                "containerPort": 8080,
+                "hostPort": 8080,
+                "protocol": "tcp"
+            }
+        ],
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+                "awslogs-group": "${log_group}-lg",
+                "awslogs-region": "${region}",
+                "awslogs-create-group": "true",
+                "awslogs-stream-prefix": "container"
+            }
+        }
+    }
+]

@@ -1,0 +1,6 @@
+.github
+.vscode
+appspec.json
+Dockerfile
+README.md
+terraform*
